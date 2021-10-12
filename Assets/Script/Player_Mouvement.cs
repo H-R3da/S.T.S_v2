@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Player_Mouvement : MonoBehaviour
 {
-
+    //i need to add lerping on the shapes but i'm following a git contibution per day programme i wasted the whole day today so i might just cheat
     public Rigidbody2D rb;
 
     public float Max_distance = 1;
