@@ -19,9 +19,13 @@ public class Generating_Positions : MonoBehaviour
         gap[0] = 1.129216f;
         gap[1] = 0.6415393f;
         newPoint = new Vector3(centerPoint.x + gap[0], centerPoint.y + gap[1], centerPoint.z);
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 2; i++)
         {
-
+            for (int j = 0; j < 2; i++)
+            {
+                positionsArrays[i, 2 + j + 1] = new Vector3(positionsArrays[i, 2].x - Mathf.Pow(i, -1) * (gap[0] * j + 1), positionsArrays[i, 2].y + (gap[1] * j + 1), positionsArrays[i, 2].z);
+                positionsArrays[i, 2 + j + 1] = new Vector3(positionsArrays[i, 2].x + Mathf.Pow(i, -1) * (gap[0] * j + 1), positionsArrays[i, 2].y - (gap[0] * j + 1), positionsArrays[i, 2].z);
+            }
         }
 
     }
