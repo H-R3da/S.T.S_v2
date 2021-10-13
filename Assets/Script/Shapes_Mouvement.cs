@@ -3,6 +3,11 @@ using System.Collections;
 
 public class Shapes_Mouvement : MonoBehaviour
 {
+    //positionsArrays contains the two ordered lists of positions that the shapes may occupy 
+    //the 0 list represents the ordered / line of positions starting from the far right
+    //the 1 list represents the ordered \ line of positions starting from the far right
+    private Vector3[,] positionsArrays = new Vector3[5, 2];
+
     //i need to add lerping on the shapes but i'm following a git contibution per day programme i wasted the whole day today so i might just cheat
     public Rigidbody2D rb;
 
