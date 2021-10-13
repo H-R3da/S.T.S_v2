@@ -11,6 +11,7 @@ public class Generating_Positions : MonoBehaviour
     public Vector3 newPoint;
 
     // Start is called before the first frame update
+    //why the fuck my commit won't work
     void Start()
     {
         positionsArrays[2, 0] = centerPoint;
