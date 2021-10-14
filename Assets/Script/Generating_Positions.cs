@@ -21,13 +21,24 @@ public class Generating_Positions : MonoBehaviour
         newPoint = new Vector3(centerPoint.x + gap[0], centerPoint.y + gap[1], centerPoint.z);
         for (int i = 0; i < 2; i++)
         {
-            for (int j = 0; j < 2; i++)
+            for (int j = 0; j < 2; j++)
             {
-                positionsArrays[2 + (j + 1), i] = new Vector3(positionsArrays[2, i].x - Mathf.Pow(i, -1) * (gap[0] * j + 1), positionsArrays[2, i].y + (gap[1] * j + 1), positionsArrays[2, i].z);
-                positionsArrays[2 - (j + 1), i] = new Vector3(positionsArrays[2, i].x + Mathf.Pow(i, -1) * (gap[0] * j + 1), positionsArrays[2, i].y - (gap[1] * j + 1), positionsArrays[2, i].z);
+                positionsArrays[2 + (j + 1), i] = new Vector3(positionsArrays[2, i].x + Mathf.Pow(-1, i) * (gap[0] * j + 1), positionsArrays[2, i].y + (gap[1] * j + 1), positionsArrays[2, i].z);
+                positionsArrays[2 - (j + 1), i] = new Vector3(positionsArrays[2, i].x - Mathf.Pow(-1, i) * (gap[0] * j + 1), positionsArrays[2, i].y - (gap[1] * j + 1), positionsArrays[2, i].z);
             }
         }
+        Debug.Log("hello");
+        for (int i = 0; i < 2; i++)
+        {
+            for (int j = 0; j < 5; j++)
+            {
 
+                Debug.Log(positionsArrays[j, i]);
+
+            }
+        }
+        Debug.Log(positionsArrays[2, 0]);
+        Debug.Log(positionsArrays[2, 1]);
     }
 
     // Update is called once per frame
